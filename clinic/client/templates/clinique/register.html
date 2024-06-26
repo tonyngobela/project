@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block 'content' %}
+{% load static %}
+
+    <form name="contact_form" class="default-form contact-form" action="" method="post">
+        {% csrf_token%}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">    
+                    <label name="username">nom:<input class="form-control" type="text" placeholder="entrer le nom" name="username" ></label><br>
+                </div>
+            </div>
+            <div class="col-md-6">    
+                <div class="form-group">
+                    <label name="username">Email:    <input class="form-control" type="mail" placeholder="entrer le l'email" name="email" ></label><br>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label name="username">password: <input class="form-control" type="password" placeholder="entrer le password" name="password" ></label><br>
+                </div>
+            </div>      
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label name="username">password: <input class="form-control" type="password" placeholder="confirmer le mot de password" name="password1" ></label><br>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group text-center">
+                    <button type="submit" class="btn-style-one">creer</button>
+                </div>
+            </div>
+        </div>    
+    </form>
+    <a href="{% url 'logins' %}">j'ai deja un compte</a>
+
+{% endblock  %}

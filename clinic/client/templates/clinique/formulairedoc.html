@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block 'content' %}
+{% load static %}
+
+<h1>AJOUT DE Docteur</h1>
+<form action=" {% url "ajoutmedecin" %}" method="POST" enctype="multipart/form-data">
+   {% csrf_token %}
+     <input type="text" name="nom" placeholder="entrer le nom du Medecin">
+     <input type="text" name="service" placeholder="entrer le nom du service">
+    <button type="submit">Ajouter</button>
+</form>
+
+{% endblock  %}

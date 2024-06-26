@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block 'content' %}
+{% load static %}
+<form class="default-form contact-form" action="" method="post">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label name="email">Email:<input class="form-control" type="mail" placeholder="entrer l'adresse mail" name="email"></label><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <input  type="submit" placeholder="valider">
+            </div>
+        </div>
+    </div>
+</form>
+<a href="{% url 'login' %}">se connecter</a>
+
+
+{% endblock  %}

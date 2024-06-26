@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block 'content' %}
+{% load static %}
+
+<h1>AJOUT DE SERVICES HOSPITALIERS</h1>
+<form action="" method="POST" enctype="multipart/form-data">
+   {% csrf_token %}
+
+    <label for='nom'> Nom service <input type="text" name="nom" placeholder="entrer le nom du service"></label>
+    <button type="submit">Ajouter</button>
+</form>
+
+{% endblock  %}

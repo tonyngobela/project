@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="password" placeholder="entrer le nouveau password" name="password1" ><br>
+        <input type="password" placeholder="confirmer le nouveau password" name="password" ><br>
+        <button type="submit">verifier</button>
+    </form>
+    <a href="{% url 'urllogin'%}">verification de l'utilisateur</a>
+    
+</body>
+</html>

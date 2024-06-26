@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block 'content' %}
+{% load static %}
+
+<form name="contact_form" class="default-form contact-form" action="" method="post">
+    {% csrf_token%}
+    <div class="row">
+        <div class="col-md-6">    
+            <div class="form-group">
+                <label name="username">Email:    <input class="form-control" type="mail" placeholder="entrer l'email" name="email" ></label><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label name="username">password: <input class="form-control" type="password" placeholder="entrer le password" name="password" ></label><br>
+            </div>
+        </div>      
+        <div class="col-md-12">
+            <div class="form-group text-center">
+                <button type="submit" class="btn-style-one">connexion</button>
+            </div>
+        </div>
+    </div>    
+</form>
+<a href="{% url 'register'%}">creer un compte</a>
+<a href="{% url 'email'%}">Mot de passe oublier</a>
+
+
+{% endblock  %}
